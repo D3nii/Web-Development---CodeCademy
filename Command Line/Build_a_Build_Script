@@ -1,0 +1,28 @@
+#!/bin/bash
+echo "Hello Mate!"
+firstline=$(head -n 1 source/changelog.md)
+read -a splitfirstline <<< $firstline
+version=${splitfirstline[1]}
+echo $version
+
+echo "Press 1 for yes or 0 for no"
+read versioncontinue
+
+if [ $versioncontinue -eq 1 ]
+  do
+    for x in source/*
+    do
+      if [ "$x" -eq "source/secretinfo.md" ]
+      then
+        echo "Not copying" $filename
+      else
+        echo "Copying" $filename
+        cp $filename build/.
+      fi
+    done
+    cd build/
+    echo "Build version $version contains:"
+	ls
+  else
+    echo "Please come back when you are ready"
+fi

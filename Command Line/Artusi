@@ -1,0 +1,29 @@
+pwd
+ls -a
+ls -l
+ls -alt
+cd drawing/pencils
+ls -a
+cp color.txt graphite.txt
+cd ../charcoal/
+cp compressed.txt vine.txt
+cp vine.txt ../pencils/color.txt
+cd ../../painting/
+pwd
+ls -alt
+cd brushes/
+ls -alt
+cp f* ../paint/
+cd ../../sculpting/
+ls -alt
+cd clay/polymer/
+ls -a
+mv airdry.txt ../ceramic/
+cd ..
+cd ceramic
+ls -a
+rm earthenware.txt
+cd ..
+rm -r dough
+cd ../..
+pwd

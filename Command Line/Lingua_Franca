@@ -1,0 +1,23 @@
+pwd
+nano ~/.bash_profile
+echo "Hello lol"
+source ~/.bash_profile
+nano ~/.bash_profile
+alias mk="mkdir"
+alias d="date"
+alias h="history"
+source ~/.bash_profile
+mk lol
+d
+h
+less javanese.txt
+export LESS="-N"
+source ~/.bash_profile
+less javanese.txt
+nano ~/.bash_profile
+export PS1="lol"
+source ~/.bash_profile
+d
+h
+env
+env | grep LESS

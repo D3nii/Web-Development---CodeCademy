@@ -1,0 +1,18 @@
+pwd
+ls -alt
+cat basketball.txt
+cat hockey.txt
+cat basketball.txt > hockey.txt
+cat hockey.txt
+cat lacrosse.txt
+cat lacrosse.txt >> tennis.txt
+cat tennis.txt
+cat < gymnastics.txt
+cat lacrosse.txt | wc
+cat equipment.txt
+sort equipment.txt
+uniq equipment.txt
+grep 'Japan' roster.txt
+grep -R 'player' .
+cat games.txt
+sed 's/loss/win/g' games.txt

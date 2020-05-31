@@ -1,0 +1,23 @@
+pwd
+nano hello.txt
+Hello, I am nano
+nano ~/.bash_profile
+echo "Hello"
+source ~/.bash_profile
+nano ~/.bash_profile
+alias p="pwd"
+alias ll="ls -la"
+source ~/.bash_profile
+p
+ll
+nano ~/.bash_profile
+export USER="Dani"
+nano ~/.bash_profile
+export PS1=">> "
+source ~/.bash_profile
+p
+ll
+echo $HOME
+echo $PATH
+env
+

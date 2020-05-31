@@ -1,0 +1,21 @@
+ls -alt
+cat rocks.txt
+cat rocks.txt > mosses.txt
+cat mosses.txt
+wc -l < plants.txt
+cat streams.txt >> plants.txt
+cat plants.txt
+cat plants.txt >> trees.txt
+cat trees.txt
+ls -l | head > list1.txt
+cat list1.txt
+ls -la | head >> list1.txt | wc
+cat list1.txt
+sort mammals.txt
+uniq mammals.txt
+sort flowers.txt | uniq > uniq-flowers.txt
+cat uniq-flowers.txt
+grep 'Mushroom' fungi.txt
+grep -i Mushroom fungi.txt
+grep -Rl tree .
+sed 's/Dirt/Soils/g' soils.txt

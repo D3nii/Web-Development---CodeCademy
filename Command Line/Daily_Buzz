@@ -1,0 +1,21 @@
+pwd
+ls
+cd national/politics/
+ls
+mkdir elections/
+cd elections
+touch candidates.txt
+touch issues.txt
+cd ../../..
+pwd
+mkdir business
+cd business
+ls
+mkdir startups
+cd ..
+mkdir business/startups/disruptors/
+touch business/startups/disruptors/tech.txt
+touch business/startups/disruptors/design.txt
+touch business/startups/disruptors/education.txt
+cd ..
+pwd
