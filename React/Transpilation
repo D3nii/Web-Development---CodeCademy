@@ -1,0 +1,11 @@
+npm init
+npm install babel-cli -D
+npm install babel-preset-env -D
+touch .babelrc
+In the '.babelrc' file:
+{
+  "presets": ["env"]
+}
+In the 'package.json' file:
+"build": "babel src -d lib"
+npm run build
