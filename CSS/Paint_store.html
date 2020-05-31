@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>House Store</title>
+  <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+  <style type="text/css">
+    /* Universal Styles */
+
+        html {
+          font-size: 16px;
+        }
+
+        body {
+          font-family: "Open Sans", sans-serif;
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        strong {
+          font-weight: bold;
+        }
+
+        .image-container {
+          overflow: hidden;
+        }
+
+        .image-container img {
+          display: block;
+          max-width: 100%;
+        }
+
+        @media only screen and (max-width: 990px) {
+          html {
+            font-size: 14px;
+          }
+        }
+
+        /* Header */
+
+        header {
+          display: flex;
+          align-items: center;
+          padding: .5rem 3.75rem;
+          background-color: #ff8000;
+        }
+
+        header .logo-small {
+          display: none;
+        }
+
+        header .logo-small,
+        header .logo-big {
+          flex-grow: 1;
+        }
+
+        nav li {
+          display: inline;
+          padding-right: 2rem;
+        }
+
+        nav li:last-child {
+          padding-right: 0;
+        }
+
+        @media only screen and (max-width: 990px) {
+          header .logo-big {
+            display: none;
+          }
+
+          header .logo-small {
+            display: block;
+          }
+        }
+
+        @media only screen and (max-width: 540px) {
+          header {
+            flex-direction: column;
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+          header .logo-small {
+            margin-bottom: 1rem;
+          }
+        }
+
+        /* Banner */
+
+        #banner {
+          position: relative;
+          height: 43.75rem;
+          padding: 0 25%;
+          background: url(" https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-6/banner.png") center center no-repeat;
+          background-size: cover;
+          text-align: center;
+        }
+
+        #banner:before { /* Orange Overlay */
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 128, 0, 0.75);
+        }
+
+        #banner * {
+          position: relative; /* Makes elements display above overlay. */
+        }
+
+        h1 {
+          padding-top: 10.4375rem;
+          padding-bottom: 1.25rem;
+          font-family: "Creepster", cursive;
+          font-size: 8rem;
+          color: rbga(0, 0, 0, 0.7);
+
+        }
+
+        #banner p {
+          color: white;
+          line-height: 1.5;
+          font-size: 1.375rem;
+        }
+
+        @media only screen and (max-width: 820px) {
+          h1 {
+            padding-top: 7rem;
+            font-size: 6rem;
+          }
+        }
+
+        @media only screen and (max-width: 590px) {
+          h1 {
+            font-size: 4rem;
+          }
+        }
+
+        /* Color Guide */
+
+        #color-guide {
+          padding: 3.875rem 15% 13.5rem 15%;
+        }
+
+        #color-guide .introduction {
+          padding: 0 10%;
+          margin-bottom: .75rem;
+          text-align: center;
+          font-size: 1.375rem;
+          line-height: 1.4;
+        }
+
+        #color-guide h2 {
+          margin-bottom: 2.4375rem;
+          line-height: 1;
+          font-size: 2rem;
+          color: #ff8000;
+        }
+
+        #color-guide .color {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 5.25rem;
+        }
+
+        .color .information {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 35%;
+        }
+
+        .color .information h3 {
+          padding-bottom: .5rem;
+          font-size: 1.375rem;
+          font-weight: bold;
+        }
+
+        .color .information p {
+          font-size: .875rem;
+          line-height: 1.4;
+        }
+
+        .color .swatches {
+          width: 60%;
+        }
+
+        .color .swatches h4 {
+          margin-bottom: 1.25rem;
+          font-size: 1.125rem;
+          font-weight: bold;
+          color: #9b9b9b;
+        }
+
+        .color .swatch {
+          display: flex;
+          height: 6.6875rem;
+          border: 10px solid #e6e6e6;
+          margin-bottom: 1.25rem;
+        }
+
+        .color .swatch:last-child {
+          margin-bottom: 0;
+        }
+
+        .color .swatch > div {
+          flex-grow: 1;
+          border-right: 10px solid #e6e6e6;
+        }
+
+        .color .swatch > div:last-child {
+          border-right: 0;
+        }
+
+        @media only screen and (max-width: 820px) {
+          #color-guide .color {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .color .information {
+            width: 100%;
+            margin-bottom: 3rem;
+            align-items: center;
+          }
+
+          .color .information h3 {
+            padding-bottom: 1.5rem;
+          }
+
+          .color .information p {
+            margin-bottom: 2rem;
+          }
+
+          .color .swatches {
+            width: 100%;
+          }
+        }
+
+        /* Red Swatches */
+
+        .reds .base-color {
+          color: hsl(350, 100%, 50%);
+        }
+
+        /* Red lightness decreases by 15 */
+        .reds .lightness .color-1 {
+          background-color: hsl(350, 100%, 80%);
+        }
+
+        .reds .lightness .color-2 {
+          background-color: hsl(350, 100%, 65%);
+        }
+
+        .reds .lightness .color-3 {
+          background-color: hsl(350, 100%, 50%);
+        }
+
+        .reds .lightness .color-4 {
+          background-color: hsl(350, 100%, 35%);
+        }
+
+        .reds .lightness .color-5 {
+          background-color: hsl(350, 100%, 20%);
+        }
+
+        /* Red saturation decreases by 15 */
+        .reds .saturation .color-1 {
+          background-color: hsl(350, 100%, 50%);
+        }
+
+        .reds .saturation .color-2 {
+          background-color: hsl(350, 85%, 50%);
+        }
+
+        .reds .saturation .color-3 {
+          background-color: hsl(350, 70%, 50%);
+        }
+
+        .reds .saturation .color-4 {
+          background-color: hsl(350, 55%, 50%);
+        }
+
+        .reds .saturation .color-5 {
+          background-color: hsl(350, 40%, 50%);
+        }
+
+        /* Red hue increases by 15 */
+        .reds .hue .color-1 {
+          background-color: hsl(320, 100%, 50%);
+        }
+
+        .reds .hue .color-2 {
+          background-color: hsl(335, 100%, 50%);
+        }
+
+        .reds .hue .color-3 {
+          background-color: hsl(350, 100%, 50%);
+        }
+
+        .reds .hue .color-4 {
+          background-color: hsl(5, 100%, 50%);
+        }
+
+        .reds .hue .color-5 {
+          background-color: hsl(20, 100%, 50%);
+        }
+
+        /* Green Swatches */
+
+        .greens .base-color {
+          color: hsl(130, 100, 50);
+        }
+
+        /* Green lightness decreases by 20 */
+        .greens .lightness .color-1 {
+          background-color: hsl(103, 100%, 90%);
+        }
+
+        .greens .lightness .color-2 {
+          background-color: hsl(103, 100%, 70%);
+        }
+
+        .greens .lightness .color-3 {
+          background-color: hsl(103, 100%, 50%);
+        }
+
+        .greens .lightness .color-4 {
+          background-color: hsl(103, 100%, 30%);
+        }
+
+        .greens .lightness .color-5 {
+          background-color: hsl(104, 100%, 10%);
+        }
+
+        /* Green saturation decreases by 20 */
+        .greens .saturation .color-1 {
+          background-color: hsl(130, 100%, 50%);
+        }
+
+        .greens .saturation .color-2 {
+          background-color: hsl(130, 80%, 50%);
+        }
+
+        .greens .saturation .color-3 {
+          background-color: hsl(130, 60%, 50%);
+        }
+
+        .greens .saturation .color-4 {
+          background-color: hsl(130, 40%, 50%);
+        }
+
+        .greens .saturation .color-5 {
+          background-color: hsl(131, 20%, 50%);
+        }
+
+        /* Green hue increases by 22 */
+        .greens .hue .color-1 {
+          background-color: hsl(88, 100%, 50%);
+        }
+
+        .greens .hue .color-2 {
+          background-color: hsl(108, 100%, 50%);
+        }
+
+        .greens .hue .color-3 {
+          background-color: hsl(130, 100%, 50%);
+        }
+
+        .greens .hue .color-4 {
+          background-color: hsl(152, 100%, 50%);
+        }
+
+        .greens .hue .color-5 {
+          background-color: hsl(174, 100%, 50%);
+        }
+
+        /* Blue Swatches */
+
+        .blues .base-color {
+          color: hsl(220, 100, 50);
+        }
+
+        /* Blue lightness decreases by 20 */
+        .blues .lightness .color-1 {
+          background-color: hsl(220, 100%, 90%);
+        }
+
+        .blues .lightness .color-2 {
+          background-color: hsl(220, 100%, 70%);
+        }
+
+        .blues .lightness .color-3 {
+          background-color: hsl(220, 100%, 50%);
+        }
+
+        .blues .lightness .color-4 {
+          background-color: hsl(220, 100%, 30%);
+        }
+
+        .blues .lightness .color-5 {
+          background-color: hsl(220, 100%, 10%);
+        }
+
+        /* Blue saturation decreases by 20 */
+        .blues .saturation .color-1 {
+          background-color: hsl(220, 100%, 50%);
+        }
+
+        .blues .saturation .color-2 {
+          background-color: hsl(220, 80%, 50%);
+        }
+
+        .blues .saturation .color-3 {
+          background-color: hsl(220, 60%, 50%);
+        }
+
+        .blues .saturation .color-4 {
+          background-color: hsl(220, 40%, 50%);
+        }
+
+        .blues .saturation .color-5 {
+          background-color: hsl(220, 20%, 50%);
+        }
+
+        /* Blue hue decreases by 20 */
+        .blues .hue .color-1 {
+          background-color: hsl(260, 100%, 50%);
+        }
+
+        .blues .hue .color-2 {
+          background-color: hsl(240, 100%, 50%);
+        }
+
+        .blues .hue .color-3 {
+          background-color: hsl(220, 100%, 50%);
+        }
+
+        .blues .hue .color-4 {
+          background-color: hsl(200, 100%, 50%);
+        }
+
+        .blues .hue .color-5 {
+          background-color: hsl(180, 100%, 50%);
+        }
+
+        /* Footer */
+
+        footer {
+          position: relative;
+          height: 30rem;
+          padding: 7.8125rem 30% 0 30%;
+          background: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-6/footer.png") center center no-repeat;
+          background-size: cover;
+          text-align: center;
+          font-size: 1.125rem;
+          line-height: 1.4;
+          color: white;
+        }
+
+        footer:before { /* Overlay */
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 128, 0, 0.7);
+        }
+
+        footer * {
+          position: relative; /* Makes elements display above overlay. */
+        }
+
+        footer strong {
+          display: block;
+          margin-bottom: 1.25rem;
+          font-size: 2.25rem;
+        }
+
+        footer p {
+          margin-bottom: 4.3125rem;
+        }
+
+        footer .button {
+          padding: 1.25rem 3.75rem;
+          border-radius: 4px;
+          background-color: #ff8000;
+        }
+
+        @media only screen and (max-width: 560px) {
+          footer {
+            padding: 4.8125rem 15% 0 15%;
+          }
+        }
+
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="image-container logo-small">
+      <img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-6/logo-sm.png">
+    </div>
+    <div class="image-container logo-big">
+      <img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-6/logo-lg.png">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Tools</a></li>
+        <li><a href="#">Lumber</a></li>
+        <li><a href="#">Paint</a></li>
+        <li><a href="#">Garden</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <div id="banner">
+    <h1>PAINTING IS SCARY</h1>
+    <p>But it doesn't have to be! Let our handy Virtual Paint Department help guide you through the process of choosing a color. Know the hue? You know what to do. Click the order button and we'll get the paint to you.</p>
+  </div>
+
+  <!-- Color Guide -->
+  <div id="color-guide">
+    <div class="introduction">
+      <h2>Color Guide</h2>
+      <p>Here at HouseStore, we take color seriously. In each of the following sections, well explore our base colors in swatches that incrementally change three values: <strong>Hue</strong>, <strong>Saturation</strong> and <strong>Lightness</strong>. You'll be able to pick from a wide variety of colors that all work well with each other because they <strong>stem from the same value.</strong></p>
+    </div>
+
+    <!-- Red Swatches -->
+    <div class="color reds">
+      <div class="information">
+        <h3>Reds</h3>
+        <p>Firetrucks, lipstick, fresh berries &mdash; red is a color with power, emotion, intensity. For this reason we recommend using reds as accent colors. Red is particularly suited to kitchens, as it is said to evoke hunger!</p><p>Our base red is <span class="base-color">HSL (350, 100, 50)</span></p>
+        <div class="image-container">
+          <img src="	https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-6/reds.png">
+        </div>
+      </div>
+      <div class="swatches">
+        <h4>Lightness</h4>
+        <div class="swatch lightness">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+        <h4>Saturation</h4>
+        <div class="swatch saturation">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+        <h4>Hue</h4>
+        <div class="swatch hue">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Green Swatches -->
+    <div class="color greens">
+      <div class="information">
+        <h3>Greens</h3>
+        <p>They say that geniuses choose green &mdash; we think any of these verdant colors will look smart! Deck your halls like a lush outdoor space, adorn your rooms with emerald, or just make your houseguests green with envy!</p>
+        <p>Our base green is <span class="base-color">HSL (130, 100, 50)</span></p>
+        <div class="image-container">
+          <img src="	https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-6/greens.png">
+        </div>
+      </div>
+      <div class="swatches">
+        <h4>Lightness</h4>
+        <div class="swatch lightness">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+        <h4>Saturation</h4>
+        <div class="swatch saturation">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+        <h4>Hue</h4>
+        <div class="swatch hue">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blue Swatches -->
+    <div class="color blues">
+      <div class="information">
+        <h3>Blues</h3>
+        <p>Blues dont give us the blues &mdash; in fact, blue is one of the most popular colors in home interiors, and for good reason! Energizing like a summer sky, calming like a lakeshore, light as mist or deep as indigo, blue can do it all.</p>
+        <p>Our base blue is <span class="base-color">HSL (220, 100, 50)</span></p>
+        <div class="image-container">
+          <img src="	https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-6/blues.png">
+        </div>
+      </div>
+      <div class="swatches">
+        <h4>Lightness</h4>
+        <div class="swatch lightness">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+        <h4>Saturation</h4>
+        <div class="swatch saturation">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+        <h4>Hue</h4>
+        <div class="swatch hue">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <strong>All set? Click below to order.</strong>
+    <p>Most colors can be delivered to your door within 48 hours. We'll reach out if your color needs some extra attention, which could delay shipment.</p>
+    <a href="#" class="button">Order My Paint</a>
+  </footer>
+</body>
+</html>

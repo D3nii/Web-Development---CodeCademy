@@ -1,0 +1,25 @@
+#f {
+	height: 50px;
+}
+
+#ft {
+	font-family: Helvetica;
+	font-size: 100px;
+	font-weight: bold;
+	color: khaki;
+	text-align: center;
+}
+
+.br	h6{
+	font-family: Helvetica;
+	font-size: 32px;
+	font-weight: bold;
+	color: white;
+	background-color: mediumspringgreen;
+}
+
+.fr	{
+	font-family: Helvetica;
+	font-weight: bold;
+	color: blue;
+}
