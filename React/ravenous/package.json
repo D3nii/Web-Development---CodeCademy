@@ -4,10 +4,11 @@
   "private": true,
   "dependencies": {
     "react": "^15.6.0",
-    "react-dom": "^15.6.0"
+    "react-dom": "^15.6.0",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
-    "react-scripts": "3.0.0"
+    "react-scripts": "^3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
