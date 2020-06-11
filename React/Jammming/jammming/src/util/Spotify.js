@@ -1,6 +1,8 @@
 //Get your Client Id from developer.spotify.com/
 const clientId = '';
-const redirectUri = 'http://localhost:3000/';
+const redirectUri = 'https://spotify07.surge.sh/';
+
+//View mine at http://spotify07.surge.sh! :)
 
 let accessToken;
 

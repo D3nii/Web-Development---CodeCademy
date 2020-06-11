@@ -57,10 +57,9 @@ class App extends React.Component {
     })
   }
 
-  search(term) {
-    Spotify.search(term).then(searchResults => {
-      this.setState( { searchResults: searchResults } );
-    })
+  search(term){
+    Spotify.search(term).then(searchResults =>
+      this.setState({searchResults: searchResults}))
   }
 
   render() {
@@ -71,11 +70,12 @@ class App extends React.Component {
           <SearchBar onSearch={this.search} />
           <div className="App-playlist">
             <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack} />
-            <Playlist playlistName={this.state.playlistName} onRemove={this.removeTrack} playlistTracks={this.state.playlistTracks} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
+            <Playlist playlistName={this.state.playlistName} onRemove={this.removeTrack} playlistTracks={this.state.playlistTracks} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} isRemoval={false}/>
           </div>
+          <span id="credit">Made by Dani.</span>
         </div>
       </div>
-    );
+    )
   }
 }
 

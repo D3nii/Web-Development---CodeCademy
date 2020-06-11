@@ -50,3 +50,10 @@ h2 {
     flex-direction: column;
   }
 }
+
+#credit {
+  position: relative;
+  left: 90%;
+  top: 30px;
+  font-style: italic;
+}
