@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Original Deployed Website
+
+The website is deployed as of June 12th, 2020 and can ye viewed at [Surge](http://spotify07.surge.sh/).
+
 ## Available Scripts
 
 In the project directory, you can run:
