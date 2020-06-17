@@ -1,0 +1,4 @@
+SELECT ROUND(watch_duration_in_minutes), COUNT(*) AS 'count' 
+FROM watch_history
+GROUP BY ROUND(watch_duration_in_minutes)
+ORDER BY ROUND(watch_duration_in_minutes);
