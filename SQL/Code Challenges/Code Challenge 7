@@ -1,0 +1,3 @@
+SELECT title, publisher
+FROM news
+ORDER BY title;

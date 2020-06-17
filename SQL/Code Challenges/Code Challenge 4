@@ -1,0 +1,4 @@
+SELECT *
+FROM nomnom
+WHERE cuisine = 'Japanese' 
+AND price = '$$';

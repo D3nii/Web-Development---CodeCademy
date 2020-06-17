@@ -1,0 +1,5 @@
+SELECT *
+FROM news
+WHERE category = 'b'
+ORDER BY timestamp DESC
+LIMIT 20;

@@ -1,0 +1,4 @@
+SELECT DISTINCT name
+FROM babies
+WHERE name LIKE 'S%'
+LIMIT 20;

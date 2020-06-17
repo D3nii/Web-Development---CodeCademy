@@ -1,0 +1,5 @@
+SELECT name, gender, number
+FROM babies
+WHERE year = 1880
+ORDER BY number DESC
+LIMIT 10;

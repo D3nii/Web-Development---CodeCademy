@@ -1,0 +1,3 @@
+SELECT year, number
+FROM babies
+WHERE name = 'Lillian';
