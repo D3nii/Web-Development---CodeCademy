@@ -1,0 +1,12 @@
+git merge edits
+
+git add README.md
+
+git add examples.md
+
+git commit -m "commit-1"
+
+git branch
+
+git branch -D edits
+

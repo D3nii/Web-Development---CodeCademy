@@ -1,0 +1,37 @@
+git branch
+
+git branch -D moma
+git branch -D whitney
+
+git branch unordered-list
+
+/----- Replace the text
+<ul>
+    <li>Join Kay in celebrating their 29th birthday with free food and beverages</li>
+    <li>karaoke and a special appearance by Willy Nelson</li>
+    <li>explore the Met museum before or after you stop by!</li>
+    <li>Birthday presents optional</li>
+</ul>
+
+git add .
+
+git commit -m "commit-1"
+
+git checkout master
+
+git merge unordered-list
+
+git branch big-heading
+
+git checkout big-heading
+
+//----- Replace the text
+<h1 style="font-size: 72px">Kay's Birthday Party</h1>
+
+git add .
+
+git commit -m "commit-2"
+
+git checkout master
+
+git merge big-heading

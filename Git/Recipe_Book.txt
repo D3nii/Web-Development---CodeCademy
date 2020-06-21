@@ -1,0 +1,23 @@
+cd veggie-favorites
+
+//----- Make a change, add it to the staging area, and commit.
+git add .
+git commit -m "Add"
+
+cd ../veggie-clone
+
+git fetch
+
+git origin/master master
+
+//----- Make a new branch, change the text in new-recipe.txt
+git branch new
+git checkout new
+
+git add .
+
+git fetch
+
+git push new master
+
+cd ../veggie-favorites

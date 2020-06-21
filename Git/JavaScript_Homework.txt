@@ -1,0 +1,17 @@
+git clone maryrose-hw pr
+
+cd pr
+
+git branch new
+
+git checkout new
+
+//Save the changes
+
+git add .
+
+git commit -m "commit-1"
+
+git push
+
+cd ../maryrose-hw

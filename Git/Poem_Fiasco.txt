@@ -1,0 +1,33 @@
+git checkout HEAD road-not-taken.txt
+
+//--- Adding this in 'road-not-taken.txt' file
+And that has made all the difference.
+
+git checkout -- 'road-not-taken.txt'
+
+//--- Adding this in 'oven-bird.txt' file
+Is what to make of a diminished thing.
+
+//--- Adding this in 'fire-and-ice.txt' file
+Is also okay
+And would suffice.
+
+git add *
+
+git reset HEAD fire-and-ice.txt
+
+git commit -m "commit-1"
+
+git add *
+
+git commit -m "commit-2"
+
+git reset 145299f
+
+git checkout HEAD road-not-taken.txt
+git checkout HEAD oven-bord.txt
+git checkout HEAD fire-and-ice.txt
+
+
+
+

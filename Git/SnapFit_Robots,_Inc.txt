@@ -1,0 +1,22 @@
+git init
+
+git status
+
+git add *
+
+git status
+
+git commit -m "Commit-1"
+
+git log
+
+//----- Add this in the 'disclaimer.txt' file
+Warning: For best battery life, do not leave robot battery charging overnight.
+
+git add disclaimer.txt
+
+git status
+
+git commit -m "Commit-2"
+
+git log
