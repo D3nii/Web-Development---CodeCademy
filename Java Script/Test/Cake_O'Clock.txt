@@ -1,0 +1,59 @@
+npm start
+
+//----- copy and paste this
+it('does not provide options outside of working hours', () => {
+      const early = '7:00';
+      const late = '13:00';
+
+      browser.url('/');
+      const HTML = browser.getHTML('body');
+      const parsedHTML = parseTextFromHTML(HTML, '#select-pickUp');
+
+      assert.notInclude(parsedHTML, early);
+      assert.notInclude(parsedHTML, late);
+    });
+
+npm test
+
+//----- remove this from the 'index.handlebars'
+<option id="13:00" value="13:00">13:00</option>
+
+npm start
+
+//----- copy and paste this
+it('displays the selected hour', () => {
+      const hour = '9:00';
+
+      browser.url('/');
+      browser.selectByVisibleText('#select-pickUp', hour);
+      browser.click('#submit-order');
+      browser.url('/');
+
+      assert.include(browser.getText('#pickUp'), hour);
+    });
+
+npm test
+
+//----- copy and paste this into 'index.handlebars'
+<option id="9:00" value="9:00">9:00</option>
+
+npm start
+
+//----- copy and paste this
+it('labels the pick up hour', () => {
+    const label = 'pick up time: ';
+            
+      browser.url('/');
+      const HTML = browser.getHTML('body');
+      const parsedHTML = parseTextFromHTML(HTML, '#pickUp');
+
+      assert.include(parsedHTML, label);
+  	});
+
+npm test
+
+//----- copy and paste this into 'index.handlebars'
+<h2 id="pickUp">pick up time: <span>{{order.pickUp}}</span></h2>
+
+npm test
+
