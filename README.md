@@ -2,7 +2,7 @@
 
 Hello viewer, Welcome to the *repo*.
 
-***
+
 
 ## Honor Code
 
@@ -11,6 +11,6 @@ I am leaving this open source on the honor system. Please do not plagarize my co
 Now, when thats out of the way, I'm completely fine with anyone copying and paste *because thats what we all do.* 😏 
 
 But in return, a *like* would be appreciated. 👊
-***
+##
 
 I hope this helps! Also, if you find some code faulty, send a PR. 💪
