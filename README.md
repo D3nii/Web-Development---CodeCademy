@@ -8,7 +8,7 @@ Hello viewer, Welcome to the *repo*.
 
 I am leaving this open source on the honor system. Please do not plagarize my code! You will only learn by investing the time to work through the problems yourself!
 
-Now, when thats out of the way, I'm completely fine with anyone copying and paste *because thats what we all do.* 😏 
+Now, when thats out of the way, I'm completely fine with anyone copying and pasting *because thats what we all do.* 😏 
 
 But in return, a *like* would be appreciated. 👊
 ##
