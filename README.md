@@ -13,4 +13,4 @@ Now, when thats out of the way, I'm completely fine with anyone copying and past
 But in return, a *like* would be appreciated. 👊
 ##
 
-I hope this helps! Also, if you find some code faulty, send a PR. 💪
+I hope this helps! Also, if you find some faulty code, send a PR. 💪
